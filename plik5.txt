@@ -1,7 +1,7 @@
 program sito_eratostenesa;
 const n = 100;
 var
-tablica : array[2..n] of boolean;//314526554
+tablica : array[2..n] of boolean;//314526554//4632543
 i, b : integer;
 
 begin
