@@ -1,0 +1,53 @@
+program kalkulator;
+function potega(a,b :Real): Real;
+var
+i,k: Integer;
+begin
+     k:=round(b);
+     potega:=1;
+     for i:=1 to k do
+         begin
+         potega:=potega*a;
+         end;
+end;
+var
+  a,b : Real;
+  znak : Char;
+  wynik : Real;
+  //i,k-licznik petli
+
+
+
+
+
+
+
+  begin
+          Writeln('Podaj liczbe a');
+          Readln(a);
+          Writeln('Podaj liczbe b');
+          Readln(b);
+          Readln(znak);
+
+          Writeln('Mozna wybrac operacje +, -, *, / i ^');
+
+           case (znak) of
+              '+': wynik:=(a+b);
+              '-': wynik:=(a-b);
+              '*': wynik:=(a*b);
+              '/': if (b<>0) then
+                             wynik:=a/b;
+              '^': wynik:=potega(a,b);
+              else
+                Writeln('Wyjscie z programu');
+                Readln;
+
+           end;
+
+           Writeln(wynik:0:3);
+           Readln;
+           Readln;
+
+  end.
+
+ 

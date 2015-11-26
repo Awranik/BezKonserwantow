@@ -1,0 +1,38 @@
+#include<iostream>                                      //oblicaznie pola figury pod wykresem funkci x 
+#include<conio.h>
+#include<math.h>
+
+using namespace std;
+ double funkcja (double x)
+ {
+        return x;
+ }
+ 
+ double pole( int n, double a, double b)
+ {
+        double p=0;
+        double d= (b-a)/n;
+        double x;
+        for (int i=0; i<n; i++)
+        {
+            x= a+ (i*d)+(d/2);
+            p= p+d *fabs(funkcja(x)) ;          \
+        }
+    return p;
+}
+
+main()
+{
+      int n;
+      double a, b;
+      cout<<"podaj wartosc n" <<endl;
+      cin>>n;
+      cout<<"podaj wartosc a" <<endl;
+      cin>>a;
+      cout<<"podaj wartosc b" <<endl;
+      cin>>b;
+      cout<<"pole wynosi : " << pole(n,a,b);
+      getch();
+}
+
+                  
