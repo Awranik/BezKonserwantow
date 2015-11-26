@@ -1,6 +1,6 @@
 #include <iostream>
 
-using namespace std;
+using namespace std;//235346256
 
 const int n = 100;
 
