@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"bufio"
+	"os"
+	"strconv"
+)
+
+func main() {
+
+	var czytaj *bufio.Scanner = bufio.NewScanner(os.Stdin)
+	var zakres int;
+
+	fmt.Println("Podaj liczbê do której szukaæ liczb pierwszych:")
+	czytaj.Scan()
+	zakres, _ = strconv.Atoi(czytaj.Text())
+  	tablica := make([]bool, zakres + 1)
+		
+	for i:=2 ; i*i <= zakres ; i++ {
+		if tablica[i] == true { continue }
+		for j:=2*i ; j<=zakres ; j += i { tablica[j] = true }
+	}
+	
+	fmt.Println("Liczby pierwsze z przedzia³u od 0 do", zakres, "to:")
+	for i:=2 ; i <= zakres ; i++ { 
+		if tablica[i] == false { fmt.Print(i, ", ") } 
+	}
+}
